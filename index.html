@@ -1,12 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Exercice "Mon Site" — page HTML commentée pour débutants -->
+
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mon Site — Anthony Pailloux</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Hello world</h1>
-    
+
+    <!-- EN-TÊTE : titre à gauche, menu à droite (géré en CSS) -->
+    <header>
+        <h1>Mon Site</h1>
+
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#competences">Compétences</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- .page = conteneur qui centre tout le contenu -->
+    <div class="page">
+
+        <main>
+
+            <!-- ACCUEIL : photo de profil + texte de bienvenue -->
+            <section id="accueil">
+                <img src="images/photo-profil.png" alt="Photo de profil d'Anthony" class="photo-profil">
+                <h2>Bienvenue sur mon premier site web !</h2>
+                <p>
+                    Je m'appelle <strong>Anthony</strong> et j'apprends le
+                    <em>HTML</em> et le <em>CSS</em>.
+                </p>
+                <a href="#contact" class="bouton">Me contacter</a>
+            </section>
+
+            <!-- À PROPOS -->
+            <section id="apropos">
+                <h2>À propos de moi</h2>
+
+                <p class="apropos-intro">
+                    Je m'appelle <strong>Anthony Pailloux</strong>. Je découvre le développement web
+                    et ce site est mon premier projet pour mettre en pratique mes apprentissages.
+                </p>
+
+                <div class="ligne">
+                    <div class="bloc">
+                        <h3>Qui suis-je ?</h3>
+                        <p>
+                            Passionné par l'informatique, j'apprends à créer des pages web
+                            étape par étape, en comprenant chaque ligne de code.
+                        </p>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Mon objectif</h3>
+                        <p>
+                            Maîtriser les bases du web pour construire des sites clairs,
+                            accessibles et bien structurés.
+                        </p>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Ce que j'apprends</h3>
+                        <ul>
+                            <li><strong>HTML</strong> — structurer le contenu</li>
+                            <li><strong>CSS</strong> — styliser la page</li>
+                            <li><strong>Git & GitHub</strong> — sauvegarder mon code</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COMPÉTENCES : 3 cartes côte à côte -->
+            <section id="competences">
+                <h2>Mes compétences</h2>
+
+                <div class="ligne">
+                    <div class="bloc">
+                        <h3>HTML</h3>
+                        <p>En cours</p>
+                    </div>
+                    <div class="bloc">
+                        <h3>CSS</h3>
+                        <p>En cours</p>
+                    </div>
+                    <div class="bloc">
+                        <h3>Git & GitHub</h3>
+                        <p>Débutant</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT : formulaire centré -->
+            <section id="contact">
+                <h2>Contactez-moi</h2>
+
+                <form action="#" method="post">
+                    <label for="nom">Votre nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+
+                    <label for="email">Votre e-mail :</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Votre message :</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="bouton">Envoyer</button>
+                </form>
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Anthony Pailloux</p>
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#competences">Compétences</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </footer>
+
 </body>
 </html>
